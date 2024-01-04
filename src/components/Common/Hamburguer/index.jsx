@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Container } from "./styles";
 
 export function Hamburguer({ onNavigateToSlide }) {
@@ -43,6 +44,13 @@ export function Hamburguer({ onNavigateToSlide }) {
     };
   }, [isMenuOpen]);
 
+  const scrollToSection = (sectionId) => {
+    scroll.scrollTo(`#${sectionId}`, {
+      duration: 800,
+      smooth: 'easeInOutQuad',
+    });
+  }
+
   return (
     <Container id="hamburguer" onClick={openMenu} ref={menuRef}>
       <ul className={`menu ${isMenuOpen ? 'open' : 'hidden'}`}>
@@ -51,7 +59,7 @@ export function Hamburguer({ onNavigateToSlide }) {
         </div>
         <h1>Dant</h1>
         <li>
-          <a href="#services">Serviços</a>
+          <ScrollLink to="servicos" smooth duration={800}>Serviços</ScrollLink>
           <ul className="services">
             <li><a href='#tarot' onClick={() => handleLinkClick(0)}><span className="bullet">* </span>Tarot</a></li>
             <li><a href='#gypsy' onClick={() => handleLinkClick(1)}><span className="bullet">* </span>Baralho Cigano Lenormand</a></li>
@@ -61,9 +69,9 @@ export function Hamburguer({ onNavigateToSlide }) {
             <li><a href='#map' onClick={() => handleLinkClick(5)}><span className="bullet">* </span>Mapa Numerológico</a></li>
           </ul>
         </li>
-        <li><a href="#aboutMe">Sobre Mim</a></li>
-        <li><a href="#feedback">Feedbacks</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <li><ScrollLink to="sobremim" smooth duration={800}>Sobre Mim</ScrollLink></li>
+        <li><ScrollLink to="feedbacks" smooth duration={800}>Feedbacks</ScrollLink></li>
+        <li><ScrollLink to="contato" smooth duration={800}>Contato</ScrollLink></li>
       </ul>
     </Container>
   );

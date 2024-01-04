@@ -40,7 +40,7 @@ export function Feedback() {
   };
 
   return (
-    <Container id='feedback'>
+    <Container id='feedbacks'>
       {feedbackData.map((data, index) => (
         <div
           className='flex'

@@ -1,11 +1,18 @@
 import { Container } from './styles';
 import { Hamburguer } from '../Common/Hamburguer';
-import logo from '../../assets/home-logo.svg';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';import logo from '../../assets/home-logo.svg';
 
 export function Home({ onNavigateToSlide }) {
   const handleLinkClick = (slideIndex) => {
     onNavigateToSlide(slideIndex);
   };
+
+  const scrollToSection = (sectionId) => {
+    scroll.scrollTo(`#${sectionId}`, {
+      duration: 800,
+      smooth: 'easeInOutQuad',
+    });
+  }
 
   return (
     <Container>
@@ -24,10 +31,10 @@ export function Home({ onNavigateToSlide }) {
         <li><a className='mobile' href='#pendulum' onClick={() => handleLinkClick(4)}><span className="bullet">* </span>Pêndulo Radiestésico</a></li>
         <li><a className='mobile' href='#map' onClick={() => handleLinkClick(5)}><span className="bullet">* </span>Mapa Numerológico</a></li>
 
-        <li><a className='desktop' href='#services'><span className="bullet">* </span>Serviços</a></li>
-        <li><a className='desktop' href='#aboutMe'><span className="bullet">* </span>Sobre Mim</a></li>
-        <li><a className='desktop' href='#feedback'><span className="bullet">* </span>Feedback</a></li>
-        <li><a className='desktop' href='#contact'><span className="bullet">* </span>Contato</a></li>
+        <li><ScrollLink to="servicos" smooth duration={800} className='desktop'><span className="bullet">* </span>Serviços</ScrollLink></li>
+        <li><ScrollLink to="sobremim" smooth duration={800} className='desktop'><span className="bullet">* </span>Sobre Mim</ScrollLink></li>
+        <li><ScrollLink to="feedbacks" smooth duration={800} className='desktop'><span className="bullet">* </span>Feedback</ScrollLink></li>
+        <li><ScrollLink to="contato" smooth duration={800} className='desktop'><span className="bullet">* </span>Contato</ScrollLink></li>
       </ul>
     </Container>
   );

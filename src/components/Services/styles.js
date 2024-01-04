@@ -2,8 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  height: 100svh;
-  
+  height: 100vh;
   @media (min-width: 600px) {
     left: -13%;
     width: 100%;
@@ -121,7 +120,7 @@ export const FlipCard = styled.div`
   }
 
 }
-    `
+`
 
 export const Carousel = styled.div`
 > .carousel__nav {

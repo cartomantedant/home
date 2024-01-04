@@ -39,7 +39,7 @@ const backwardsAnimation = keyframes`
 `;
 
 export const Container = styled.div`
-  height: 100svh;
+  height: 100vh;
   position: relative;
 
   .flex {

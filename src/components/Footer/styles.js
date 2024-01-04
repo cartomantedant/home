@@ -17,8 +17,12 @@ export const Container = styled.footer`
   font-size: 1.2rem;
   background: rgba(217, 217, 217, 0.5);
   text-align: start;
-  padding: 0.8rem 0 0.8rem 3rem;
-
+  padding-left: 3rem;
+  
+  button {
+   padding: 0.8rem 0;
+  }
+  
   .credits {
     position: relative;
     padding: 2rem 5rem 3rem 7rem;
@@ -27,7 +31,6 @@ export const Container = styled.footer`
     cursor: default;
     box-shadow: 5rem 0 5rem 400rem rgba(46, 17, 82, 0.5);
   }
-
   .credits.open {
     position: absolute;
     bottom: 5rem;

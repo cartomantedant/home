@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 100svh;
+    height: 100vh;
     margin-inline: auto;
     padding: 1rem 2.8rem 1rem 3.9rem;
     display: flex;

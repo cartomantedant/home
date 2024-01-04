@@ -5,7 +5,7 @@ import ball from '../../assets/ball.png';
 
 export function Contact() {
   return (
-    <Container id='contact'>
+    <Container id='contato'>
       <main>
         <div className="flex">
           <div className="ball">
@@ -27,7 +27,7 @@ export function Contact() {
 
         <p>
           <a target='_blank' rel='noopener noreferrer' href='https://wa.me/5548996922443'>
-            Quer dar uma espiadinha no futuro? Me chame e descubra o que as cartas têm para contar sobre os seus próximos capítulos.
+            Quer se conhecer melhor? Me chame e descubra o que as cartas têm para contar.
           </a>
         </p>
 

@@ -3,14 +3,13 @@ import aboutMe from '../../assets/about-me.png';
 
 export function AboutMe() {
   return (
-    <Container id="aboutMe">
+    <Container id="sobremim">
       <img className="profile" src={aboutMe} alt="Foto de perfil de Dant" />
       <div className="text">
         <p>
-          Sou Dant, terapeuta holística e taróloga com anos de experiência,
-          mergulhando nas energias do esotérico. Especializo-me em Tarot,
-          Baralho Cigano Lenormand e Baralho de Esquerda, oferecendo leituras
-          profundas. Além disso, utilizo ferramentas como pêndulo radiestésico,
+          Sou Dant, terapeuta holística e taróloga com anos de experiência.
+          Especializo-me em Tarot, Baralho Cigano Lenormand e Baralho de Esquerda, oferecendo leituras
+          profundas. Também tenho como ferramentas o Pêndulo Radiestésico,
           Mesa Radiônica de Saint Germain e Mapa Numerológico.
         </p>
         <br />
@@ -22,12 +21,9 @@ export function AboutMe() {
         </p>
         <br />
         <p className="indent">
-          Convido você a explorar sua jornada de autoconhecimento comigo, seja
-          por meio do Tarot, radiestesia ou numerologia. Minha missão vai além
-          de prever o futuro; busco guiar cada pessoa rumo ao empoderamento
-          pessoal, conectando-as ao universo que as cerca. Descubra as diversas
-          facetas do seu ser por meio de leituras que vão além das cartas
-          tradicionais.
+          Meu objetivo é te ajudar a explorar sua jornada de autoconhecimento, seja
+          por meio do Tarot, radiestesia ou numerologia, busco guiar cada pessoa rumo ao empoderamento
+          pessoal.
         </p>
       </div>
     </Container>
